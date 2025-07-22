@@ -69,6 +69,3 @@ If Claude Desktop shows the server as "Disabled":
 3. Restart Claude Desktop completely
 4. Verify the server responds to initialize requests
 
-## License
-
-[Your License Here] 
