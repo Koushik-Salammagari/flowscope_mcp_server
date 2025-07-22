@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "flowscope": {
+      "command": "node",
+      "args": ["/home/project/mcp-server/dist/index.js"],
+      "env": {}
+    }
+  }
+}

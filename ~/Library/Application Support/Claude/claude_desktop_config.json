@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "flowscope": {
+      "command": "node",
+      "args": ["/Users/koushikreddysalammagari/Desktop/projects/project_new/mcp-server/dist/index.js"],
+      "env": {}
+    }
+  }
+} 

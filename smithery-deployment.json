@@ -1,0 +1,65 @@
+{
+  "name": "flowscope-mcp-server",
+  "version": "1.0.0",
+  "description": "Real-time application flow analysis MCP server for vibe coding",
+  "type": "mcp-server",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run build:mcp && npm run build:server",
+    "build:mcp": "cd mcp-server && npm install && npm run build",
+    "build:server": "cd server && npm install && npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "chokidar": "^3.5.3",
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/express": "^4.17.21",
+    "@types/ws": "^8.5.10",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.3.0",
+    "tsx": "^4.6.0"
+  },
+  "smithery": {
+    "runtime": "node",
+    "port": 3001,
+    "healthCheck": "/api/health",
+    "environment": {
+      "NODE_ENV": "production"
+    },
+    "capabilities": {
+      "tools": [
+        "analyze_flow",
+        "get_flow_summary", 
+        "find_orphaned_pages",
+        "analyze_security_flow",
+        "suggest_improvements",
+        "start_live_monitoring",
+        "get_live_flow_update"
+      ]
+    },
+    "webhooks": {
+      "file_changed": "/api/webhook/file-changed",
+      "flow_updated": "/api/webhook/flow-updated"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/flowscope-mcp-server"
+  },
+  "keywords": [
+    "mcp",
+    "flow-analysis",
+    "vibe-coding",
+    "real-time",
+    "web-development"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+} 
